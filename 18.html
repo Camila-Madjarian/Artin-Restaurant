@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.loader-dot {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transform: rotate(calc((360deg / 16) * var(--i)));
+}
+
+.loader-dot::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: purple;
+  border-radius: 50%;
+  animation: load 1.6s linear infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+    </style>
+</head>
+<body>
+    <main class='loader'>
+        <span class='loader-dot' style='--i:0'></span>
+        <span class='loader-dot' style='--i:-1'></span>
+        <span class='loader-dot' style='--i:-2'></span>
+        <span class='loader-dot' style='--i:-3'></span>
+        <span class='loader-dot' style='--i:-4'></span>
+        <span class='loader-dot' style='--i:-5'></span>
+        <span class='loader-dot' style='--i:-6'></span>
+        <span class='loader-dot' style='--i:-7'></span>
+        <span class='loader-dot' style='--i:-8'></span>
+        <span class='loader-dot' style='--i:-9'></span>
+        <span class='loader-dot' style='--i:-10'></span>
+        <span class='loader-dot' style='--i:-11'></span>
+        <span class='loader-dot' style='--i:-12'></span>
+        <span class='loader-dot' style='--i:-13'></span>
+        <span class='loader-dot' style='--i:-14'></span>
+        <span class='loader-dot' style='--i:-15'></span>
+      </main>
+</body>
+</html>

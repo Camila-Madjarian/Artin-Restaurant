@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
+
+.button-wrap {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  margin: 25px 50px 0;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+}
+  .facebook {
+    background-color: #3B5998;
+    
+  }
+  i.active { color: #3B5998; }
+  .instagram {
+    background-color: #3f729b;
+    
+  }
+  i.active { color: #3f729b; }
+  .xing {
+    background-color: #026466;
+    
+  }
+  i.active { color: #026466; }
+  .youtube {
+    background-color: #e52d27;
+    
+  }
+  i.active { color: #e52d27; }
+  
+.button-inner-wrap {
+      width: 115px;
+      height: 115px;
+      
+      
+    }
+i.inactive { transform: translate(100px, -50%); }
+      i.active { transform: translate(-50%, -50%); }
+.button-inner-wrap {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #DDD;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  
+  i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    transition: all 0.3s ease;
+  } 
+    i.inactive {
+      color: #CCC;
+      transform: translate(-50%, -50%);
+    }
+    
+    i.active { transform: translate(-150px, -50%); }
+  }
+
+    </style>
+</head>
+<body>
+    <div class="button-wrap facebook">
+        <div class="button-inner-wrap">
+          <i class="icon-facebook inactive"></i>
+          <i class="icon-facebook active"></i>
+        </div>
+      </div>
+      
+      <div class="button-wrap instagram">
+        <div class="button-inner-wrap">
+          <i class="icon-instagram inactive"></i>
+          <i class="icon-instagram active"></i>
+        </div>
+      </div>
+      
+      <div class="button-wrap xing">
+        <div class="button-inner-wrap">
+          <i class="icon-xing inactive"></i>
+          <i class="icon-xing active"></i>
+        </div>
+      </div>
+      
+      <div class="button-wrap youtube">
+        <div class="button-inner-wrap">
+          <i class="icon-youtube inactive"></i>
+          <i class="icon-youtube active"></i>
+        </div>
+      </div>
+</body>
+</html>

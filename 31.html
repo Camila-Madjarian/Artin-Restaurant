@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+   }
+body{
+    background: #fff;
+}
+ul{
+    position: absolute;
+    top: 50%;   width: 100%;  text-align: center;
+    transform: translate(0,-50%);
+ 
+    
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    width: 120px;  height: 120px;
+    margin: 10px;
+}
+ul li a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;   height: 100%;
+    line-height: 120px;
+    border: 2px solid #262626;
+    border-radius: 50%;
+    color: #262626;   
+    font-size: 40px;
+    transition: .5s;
+}
+ul li a:hover{
+    color: #fff;
+}
+ul li a::before,ul li a::after{
+    content: '';
+    position: absolute;
+    top: 50%;   left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;  height: 100%;
+    z-index: -1;
+    border-radius: 50%;
+    background: transparent;
+    transition: .9s;
+}
+ul li a::after{
+    border: 2px dashed #262626;
+}
+ul li:hover a::before{
+    background: #ff5722;
+    transform: translate(-50%,-50%) scale(.65);
+}
+ul li:hover a::after{
+    width: 80%;  height: 80%;
+   animation: animate 4s infinite linear;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+    </style>
+</head>
+<body>
+    
+
+    <ul>
+                <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-glass" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-folder" aria-hidden="true"></i></a></li>
+            </ul>
+</body>
+</html>

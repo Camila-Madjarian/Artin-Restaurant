@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Document</title>
+    <style>
+        /*General CSS*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+}
+#result{
+  height: 100vh !important;
+}
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100% !important;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  margin: 0px auto;
+  background: #eee;
+}
+html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social li {
+  list-style: none;
+  margin: 20px 40px;
+}
+.social li .fab {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: 0.5s;
+}
+.social li a {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+}
+.social li a::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transition: 0.5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.social li a::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: -11px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: 0.5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+.social li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg)
+    translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+}
+.social li:hover .fab {
+  color: #fff;
+}
+.social li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg)
+    translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+}
+ul .facebook:hover a {
+  background: #3b5999;
+}
+
+.social .facebook:hover a:before {
+  background: #2e4a86;
+}
+.social .facebook:hover a:after {
+  background: #4a69ad;
+}
+.social .twitter:hover a {
+  background: #55acee;
+}
+.social .twitter:hover a:before {
+  background: #4184b7;
+}
+.social .twitter:hover a:after {
+  background: #4d9fde;
+}
+.social .google-plus:hover a {
+  background: #dd4b39;
+}
+
+.social .google-plus:hover a:before {
+  background: #c13929;
+}
+.social .google-plus:hover a:after {
+  background: #e83322;
+}
+
+.social .linkedin:hover a {
+  background: #0077b5;
+}
+
+.social .linkedin:hover a:before {
+  background: #036aa0;
+}
+.social .linkedin:hover a:after {
+  background: #0d82bf;
+}
+
+.social .instagram:hover a {
+  background: linear-gradient(#400080, transparent),
+    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+}
+
+.social .instagram:hover a:before {
+  background: linear-gradient(#400080, transparent),
+    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+}
+.social .instagram:hover a:after {
+  background: linear-gradient(#400080, transparent),
+    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+}
+
+    </style>
+</head>
+<body>
+    <ul class="social">
+        <li class="facebook">
+            <a href="javascript:void(0); return false;">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="twitter">
+            <a href="javascript:void(0); return false;">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="google-plus">
+            <a href="javascript:void(0); return false;"><i class="fab fa-google-plus" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="linkedin">
+            <a href="javascript:void(0); return false;">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="instagram">
+            <a href="javascript:void(0); return false;">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

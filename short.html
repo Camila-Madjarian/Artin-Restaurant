@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript basic animation</title>  
+</head>
+<style>
+    body{
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb( 0, 204, 153);
+}
+.container{
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  border-radius: 6px;
+}
+.container img{
+  width: 300px;
+  height: 500px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 24px #000;
+}
+.container .overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 0%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 6px;
+  background: rgba(40,40,40,.6);
+  transition: all .8s ease-in-out;
+}
+.container:hover .overlay{
+  width: 100%;
+}
+
+</style> 
+<body onload="animate_string('target')">
+    
+    <div class="container">
+		<img src="https://images.unsplash.com/photo-1570739193408-06ef09ded9dd" />
+		<div class="overlay"></div>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

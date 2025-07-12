@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+   }
+body{
+    background: #fff;
+}
+ul{
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%,-50%);
+}
+ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin-left: -6px;
+}
+ul li a{
+    position: relative;
+    display: inline-block;
+    color: #fff;   background: #262626;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 40px;
+    transition: .5s;
+}
+ul li:hover a{
+    color: #2196f3;
+}
+
+ul li span{
+    position: absolute;
+    top: -80px;  left: 50%;
+    transform: translate(-50%,-100%);
+    background: #2196f3;  color: #fff;
+    display: inline-block;
+    padding: 10px 40px;
+    white-space: nowrap;
+    font-size: 25px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .9s;
+}
+ul li span::before{
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translate(-50%,50%) rotate(45deg);
+    width: 20px;  height: 20px;
+    background: #2196f3;
+}
+ul li:hover span{
+    top: -20px; 
+    opacity: 1;
+    visibility: visible;
+}
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
+            <span>Gift Tooltip</span>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-glass" aria-hidden="true"></i></a>
+            <span>Glass Tooltip</span>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+            <span>Globe Tooltip</span>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+            <span>Graduation Tooltip</span>
+        </li>
+    </ul>
+</body>
+</html>

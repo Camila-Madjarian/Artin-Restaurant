@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+   }
+body{
+    background: #262626;
+}
+ul{
+    position: absolute;
+    top: 50%;    transform: translate(0,-50%);
+    width: 100%;  text-align: center    
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 25px;
+    width: 100px;  height: 100px;
+    position: relative;
+}
+ul li a{
+   position: relative; 
+   display: inline-block;
+   width: 100%;  height: 100%;
+   text-decoration: none;  
+   color: #fff;   
+   line-height: 100px;  text-align: center;
+   font-size: 40px;
+   transition: .9s;
+   transition-delay: .5s;
+}
+ul li:hover a{
+    background: #03a9f4;
+}
+ul li .box{
+   position: absolute;
+   top: -2px;  left: -2px;
+   width: 100%;  height: 100%;
+   border: 2px solid #000;
+   transition: .5s;
+   
+}
+ul li:hover .box{
+   transform: rotate(45deg);
+}
+ul li .box span{
+   position: absolute;
+   background: #ccc;
+   transition: .9s;
+   transition-delay: .5s;
+}
+ul li:hover .box span{
+   background: #fff; 
+}
+ul li .box span:nth-child(1){
+   width: 20px;  height: 5px;
+   top: -2px; left: -2px;
+}
+ul li:hover .box span:nth-child(1){
+    width: 110%;
+}
+ul li .box span:nth-child(2){
+   width: 5px;  height: 20px;
+   top: -2px; left: -2px;
+}
+ul li:hover .box span:nth-child(2){
+    height: 110%;
+}
+ul li .box span:nth-child(3){
+   width: 20px;  height: 5px;
+   bottom: -2px;  right: -2px;
+}
+ul li:hover .box span:nth-child(3){
+   width: 110%;
+}
+ul li .box span:nth-child(4){
+    width: 5px;  height: 20px;
+    bottom: -2px;  right: -2px;
+}
+ul li:hover .box span:nth-child(4){
+    height: 110%;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-glass" aria-hidden="true"></i></a>
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+       <li>
+           <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+             <div class="box">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 <span></span>
+             </div>
+         </li>
+ </ul>
+</body>
+</html>

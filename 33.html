@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+        }
+        .card{
+            width:170px;
+            height:170px;
+            background-color: rgb(174, 122, 0);
+            background: repeating-radial-gradient(#0f0505 20%,#1e070a 40%,#e02935 60%,#de0421 100%);
+            box-shadow: 0px 0px 20px #ffbd42;
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(45deg) rotate(-40deg);
+            position: relative;
+            animation: anim 10s linear infinite;
+            border-radius: 200px;
+        }
+        .card::before{
+            content: "";
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            backdrop-filter: blur(30px);
+            border: 4px solid #201b1c;
+            transform: translateZ(60px);
+            border-radius: 10px;
+        }
+        .card::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #1e1d1d;
+            transform: translateZ(-60px);
+            border-radius: 10px;
+        }
+        .card:hover{
+            transform: scale(1.1);
+            animation: none;
+            animation: anim1 0.3s linear;
+            
+        }
+        @keyframes anim{
+            from{
+                transform: perspective(1000px) rotateX(360deg) rotate(-360deg);
+            }
+            to{
+                transform: perspective(1000px) rotateX(-360deg) rotate(360deg);
+            }
+        } @keyframes anim1{
+            to{
+                transition: all 0.5s;
+                transform: perspective(0px) rotate(0deg);                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+</html>

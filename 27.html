@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+   }
+body{
+    background: #607d8b;
+}
+.container{
+    position: absolute;
+    top: 50%;   left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container span{
+    position: relative;
+    display: inline-block;
+    width: 100px;  height: 100px;
+    background: #607d8b;  color: #fff;
+    border-radius: 50%;
+    border: 5px solid #2a383f;
+    z-index: 2;
+    display: flex;
+    justify-content: center;  align-items: center;
+}
+.container span .fa{
+    font-size: 40px;
+}
+.container ul{
+    position: absolute;
+    top: 50%;   left: 50%;
+    transform: translate(-50%,-50%) scale(.3);
+    width: 300px;  height: 300px;
+    background: #fff;
+    border: 5px solid #2a383f;
+    box-shadow: 0 0 0 12px #fff;
+    border-radius: 50%;
+    transition: .9s;
+}
+.container:hover ul{
+    transform: translate(-50%,-50%) scale(1);
+}
+.container ul li{
+    list-style: none;
+    position: absolute;
+}
+.container ul li:nth-child(1),.container ul li:nth-child(2){
+    background: #2a383f;
+    width: 5px;   height: 100%;
+    top: 0;   left: 50%;
+    transform: translateX(-50%);
+}
+.container ul li:nth-child(1){
+    transform: translateX(-50%) rotate(-45deg);
+}
+.container ul li:nth-child(2){
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.container ul li:nth-child(3){
+    left: 50%;  top: 15%;
+    transform: translate(-50%,-50%);
+}
+.container ul li:nth-child(4){
+    left: 50%;  top: 85%;
+    transform: translate(-50%,-50%);
+}
+.container ul li:nth-child(5){
+    left: 15%;  top: 50%;
+    transform: translate(-50%,-50%);
+}
+.container ul li:nth-child(6){
+    left: 85%;  top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container ul li a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #2a383f;
+    font-size: 35px;
+    transition: .5s;
+}
+.container ul li:hover a{
+    color: #ff5722;
+    transform: scale(1.3) rotateY(360deg);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+        <ul>
+            <li></li>
+            <li></li>
+            <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a> </li>
+            <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> </a> </li>
+            <li><a href="#"> <i class="fa fa-google-plus" aria-hidden="true"></i> </a> </li>
+            <li><a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> </li>                   
+        </ul>
+    </div>
+</body>
+</html>
